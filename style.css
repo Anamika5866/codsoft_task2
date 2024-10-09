@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    color:white;
+}
+body{
+  background-color: black;
+}
+h1,h2{
+  font-family: "Poppins", sans-serif;
+}
+/* nav bar*/
+nav{
+    width: 100%;
+    background-color: rgb(43, 41, 41);
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 4rem;
+    height: 60px;
+    line-height: 60px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    
+    list-style: none;
+    margin-right: 1.5rem;
+}
+nav ul a{
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+}
+nav ul a:hover{
+  color: #1a5653;
+}
+#logo{
+    font-size: larger;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.ham{
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width:850px){
+  nav{
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 0.8rem;
+  }
+  nav ul li{
+    margin-right: 1rem;
+}
+}
+@media screen and (max-width:590px){
+  nav{
+    padding-right: 2rem;
+  }
+  nav ul{
+    display: none;
+  }
+  .ham{
+    display:block;
+  }
+  .show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(43, 41, 41);
+    position:absolute;
+    top:60px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    gap:0.5rem
+  }
+}
+/* About section */
+#container{
+    height:100vh ;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    display:block;
+    margin: auto; 
+    width:60%;
+    border-radius: 35%;
+  }
+  #intro,#image{
+    width:50%;
+  }
+  #intro{
+    margin-right: 3rem;
+  }
+  #intro h1{
+    font-size: 2.5rem;
+    margin-bottom:0.5rem;
+    
+  }
+  @media screen and (max-width:910px){
+    img{
+      width:70%;
+    }
+    #intro h1{
+      font-size: 2rem;
+    }
+  }
+  @media screen and (max-width:750px){
+    img{
+      width:80%;
+    }
+  }
+  @media screen and (max-width:650px){
+    #intro h1{
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width:615px){
+   #container{
+    flex-direction: column;
+   }
+   #image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 50%;
+   }
+   img{
+    height:90% ;
+    border-radius: 100%;
+   }
+   #intro {
+    width: auto;
+    margin: 0 0.8rem;
+  }
+  #intro h1{
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  }
+  @media screen and (max-width:400px){
+    #image{
+      height: 50%;
+      width: 60%;
+    }
+  }
+  /* skill section */
+  #skills{
+  height: 70vh;
+  width: 100%;
+  }
+  h2{
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2.5rem;
+  }
+  #main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .skill-container{
+    width: 40%;
+    height: 100%;
+    background-color: #1a5653;
+    padding-bottom: 0.5rem;
+    border: 1px solid white;
+  }
+  .skill-content{
+    height: 4.5rem;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .skill-name p{
+    font-size: 1.3rem;
+    margin-left: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+  .skill-main{
+    width:100%;
+    height:1.3rem;
+    border-radius: 100px;
+  }
+  .skill-fill{
+    height: 1.3rem;
+    background-color: #5cd85a;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow: hidden;
+    border:1px solid white;
+  }
+  .skill-fill p{
+    font-size: 0.8rem;
+    padding-right: 0.3rem;
+  }
+  .skill1{
+    animation-name: html;
+    animation-duration: 2s;
+    width:90%;
+  }
+  .skill2{
+    animation-name: css;
+    animation-duration: 2s;
+    width:80%;
+  }
+  .skill3{
+    animation-name: js;
+    animation-duration: 2s;
+    width: 70%;
+  }
+  .skill4{
+    animation-name: C;
+    animation-duration: 2s;
+    width: 80%;
+  }
+  @keyframes html{
+    from{
+      width:0%;
+    }
+    to{
+      width: 90%;
+    }
+  }
+  @keyframes css{
+    from{
+      width:0%;
+    }
+    to{
+      width: 80%;
+    }
+  }
+  @keyframes js{
+    from{
+      width:0%;
+    }
+    to{
+      width: 70%;
+    }
+  }
+  @keyframes C{
+    from{
+      width:0%;
+    }
+    to{
+      width: 80%;
+    }
+  }
+  @media screen and (max-width:800px){
+    .skill-container{
+      width: 60%;
+    }
+    .skill-main,.skill-fill{
+      height: 1rem;
+    }
+    .skill-fill p{
+      font-size:0.6rem;
+    }
+  }
+  @media screen and (max-width:450px){
+    .skill-container{
+      width: 70%;
+    }
+  }
+  /* project section */
+  #project{
+    width: 100%;
+  }
+  #project-container{
+    height: 30vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a5653;
+    border: 1px solid white;
+  }
+  #project-content{
+    width: 70%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+  }
+  #project-image{
+    width:20%;
+    height:60% ;
+    background-image: url("Img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+  }
+  @media screen and (max-width:680px){
+    #project-image,#project-content{
+      height: 70%;
+    }
+  }
+  @media screen and (max-width:480px){
+    #project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    #project-container{
+      height: 38vh;
+      width:100%;
+      padding: 0.4rem;
+    }
+  }
+  /* resume section */
+#resume{
+  width: 100%;
+}
+#resume h2{
+  padding-bottom: 1rem;
+}
+#resume p{
+  text-align: center;
+}
+#resume p button{
+  padding: 0.4rem;
+  background-color: #1a5653;
+  border: none;
+  border:1px solid white;
+}
+/* contact section */
+#contact{
+  width: 100%;
+}
+#contact h2{
+  padding-bottom: 1rem;
+}
+#contact-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0.6rem;
+}
+/* footer */
+footer{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgb(43, 41, 41);
+  color:white;
+}
+footer p{
+  background-color: rgb(43, 41, 41);
+}
